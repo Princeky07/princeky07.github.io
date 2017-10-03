@@ -1,0 +1,19 @@
+h1 {
+  color: darkblue;
+}
+
+h2,
+h3 {
+  color: #0e89d5;
+}
+
+#clear {
+  list-style-type: circle;
+}
+
+#num {
+  list-style-type: decimal;
+}
+no.ul {
+  list-style-type: none;
+}
