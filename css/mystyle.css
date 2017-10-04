@@ -1,10 +1,12 @@
-h1 {
-  color: darkblue;
+@import url('https://fonts.googleapis.com/css?family=Sansita');
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Sansita', sans-serif;
+  color: #0e89d5;
 }
 
-h2,
-h3 {
-  color: #0e89d5;
+Body {
+  font-family: 'Helvetica', sans-serif;
 }
 
 #clear {
@@ -14,18 +16,7 @@ h3 {
 #num {
   list-style-type: decimal;
 }
-no.ul {
+ul.none{
   list-style-type: none;
 }
-h1.title {
-  color: cadetblue;
-  text-decoration: underline;
-}
 
-ul.list {
-  list-style-type: square;
-}
-
-#note {
-  font-size: 20px;
-}
