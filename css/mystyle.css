@@ -17,3 +17,15 @@ h3 {
 no.ul {
   list-style-type: none;
 }
+h1.title {
+  color: cadetblue;
+  text-decoration: underline;
+}
+
+ul.list {
+  list-style-type: square;
+}
+
+#note {
+  font-size: 20px;
+}
