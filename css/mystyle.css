@@ -13,9 +13,6 @@ Body {
   list-style-type: circle;
 }
 
-#num {
-  list-style-type: decimal;
-}
 ul.none{
   list-style-type: none;
 }
