@@ -1,50 +1,50 @@
 <!doctype html>
-<html lang="en-us">
+<html lang="en">
   <head>
   <meta charset="UTF-8">
   <title>Franklin, ID | princeky07.github.io | Weather</title>
   <meta name="description" content="weather_in_franklin">
   <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" type="text/css" href="../css/mystyle.css">
+  <link rel="stylesheet" type="text/css" href="../css/screen.css" media="screen">
 </head>
 
 <body>
-  <header>
-    <h1><b><i>Weather Site</i></b></h1>
-    <img alt="logo" src="images/plan-images/logo.jpeg" />
+  <header id="page-header">
+    <img src="images/plan-images/logo.jpeg" alt="logo"/>
+    <span class="site-name">Weather Site</span>
   </header>
   <nav>
-    <a title="Go to home page" href="../index.html">Home</a> |
-    <a title="here" href="">Franklin</a> |
-    Greenville |
-    Springville |
-    Search
+    <ul>
+      <li><a title="Go to home page" href="../index.html">Home</a> </li>
+      <li><a title="Franklin Weather" href="">Franklin</a> </li>
+      <li><a title="Greenville Weather" href="">Greenville</a> </li>
+      <li><a title="Springfield Weather" href="">Springfield</a> </li>
+      <li><a title="Search" href="">Search</a></li>
+    </ul>
   </nav>
   <main>
-    <article>
-      <h2>Franklin, ID</h2>
+    <h1>Franklin, ID</h1>
+    <section class="overview">
+      <h2>70 F</h2>
+      <p> 90 F / 66 F </p>
+    </section>
+
+    <section class="cur_conditions">
       <h3>Current Conditions</h3>
-        <p>
-          <b>Wind:</b> 1 - 5 MPH <br>
-          <b>Direction:</b> Southwest <br>
+      <ul>
+        <li>
+          <b>Wind:</b> Southwest @ 1 - 5 MPH
+        </li>
+        <li>
           <b>Precip:</b> 0%
-        </p>
-      <h3>Location and Temperature</h3>
-        <p>
-          <b>City:</b> Franklin <br>
-          <b>State:</b> ID <br>
-          <b>Current temp:</b> - F<br>
-          <b>High:</b> 90 F<br>
-          <b>Low:</b> 66 F <br>
-          <b>Summary:</b> Sunny
-        </p>
-      <h3>Hourly Forcast</h3>
-        <p>
-          7am - F<br>
-          8am - F<br>
-          9am - F<br>
-        </p>
-    </article>
+        </li>
+      </ul>
+    </section>
+<!--
+    <section class="hourly">
+
+    </section>
+-->
   </main>
   <footer>
     &copy;2017 Weather Site

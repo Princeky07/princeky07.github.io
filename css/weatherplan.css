@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Sansita');
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Sansita, 'Geneva', generic-family;
+  color: #0e89d5;
+}
+Body {
+  font-family: 'Helvetica', sans-serif;
+}
+main{
+  font-size: 20px
+}
