@@ -28,13 +28,17 @@ figure {
 #page-header {
   display: flex;
   align-items: center;
-  background-color: #0e89d5;
+  background-color: #0E89D5;
 }
 
-img {
+/*img {
   width: 100px
 }
-
+*/
+#logo {
+  font-size:4em;
+  margin:0;
+}
 .site-name {
   font-size: 2em;
   font-weight: 600;
@@ -47,7 +51,7 @@ nav {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #0e89d5;
+  background-color: #0E89D5;
   line-height: 3px;
   padding: 4px;
 }
@@ -64,9 +68,9 @@ nav a:visited {
 }
 
 nav a:hover,
-:focus {
+a:focus {
   /*Link: hover, Link:Focus:*/
-  color: #0E89D5;
+  color: #6C4DDD;
 }
 
 nav a:active {
@@ -136,22 +140,24 @@ h6 {
 .cur_conditions {
   background-image: url("/weather_data/images/plan-images/raindrops.jpg");
   background-color: rgba(200, 200, 200, .6);
-  margin: .2em auto;
+  margin: 2em auto;
   border: 1px solid;
   border-radius: 5px;
 }
 
 .cur_conditions ul {
-  list-style: none
+  list-style: none;
 }
 
 .cur_conditions h3 {
   text-align: center;
   color: black;
 }
-
+.hourly{
+  display: none;
+}
 footer {
   line-height: 70px;
   margin-bottom: 3em;
-  background-color: #0e89d5;
+  background-color: #0E89D5;
 }
