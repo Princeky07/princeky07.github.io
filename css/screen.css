@@ -1,3 +1,5 @@
+/*when on small screen*/
+
 @import url('https://fonts.googleapis.com/css?family=Sansita');
 * {
   box-sizing: border-box;
@@ -21,25 +23,25 @@ figcaption,
 figure {
   display: block;
   /* just in case we have
-  any older browsers that don't recognize
-  the HTML5 semantic elements */
+    any older browsers that don't recognize
+    the HTML5 semantic elements */
 }
 
 #page-header {
+  /*  align header and set background */
   display: flex;
   align-items: center;
   background-color: #0E89D5;
 }
 
-/*img {
-  width: 100px
-}
-*/
 #logo {
-  font-size:4em;
-  margin:0;
+  /*  change logo eliment size */
+  font-size: 4em;
+  margin: 0;
 }
+
 .site-name {
+  /*  adust font in header */
   font-size: 2em;
   font-weight: 600;
   font-family: Sansita, "gadget", generic-family;
@@ -47,18 +49,17 @@ figure {
 }
 
 nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  /*  move nav to bottom */
+  display: flex;
+  order: 4;
   background-color: #0E89D5;
   line-height: 3px;
   padding: 4px;
 }
 
 nav a:link {
-  text-decoration: none;
   /*unvisited link*/
+  text-decoration: none;
   color: #FFF;
 }
 
@@ -73,34 +74,31 @@ a:focus {
   color: #6C4DDD;
 }
 
-nav a:active {
-
-}
-
 nav ul {
+  /*    style of nav bar*/
   display: flex;
   list-style: none;
-  flex-flow: row;
-  align-items: center;
   padding-left: 0;
-  /*  margin: 10px*/
 }
 
 nav ul li {
+  /*  sizing of nav bar*/
   padding-right: 1em;
   font-size: 4vw;
 }
 
-Body {
+body {
+  /* remove any margin and padding from body */
+  display: flex;
+  flex-direction: column;
   font-family: 'Helvetica', sans-serif;
   margin: 0;
-  /* remove any margin from body */
   padding: 0;
-  /* ditto for padding */
   font-size: 20px;
 }
 
 main {
+  /*  add background image and styling components*/
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -115,29 +113,47 @@ h3,
 h4,
 h5,
 h6 {
+  /*  style fonts to headings */
   font-family: Sansita, 'Geneva', generic-family;
   color: #0e89d5;
 }
 
 .overview {
-  padding: 1em;
+  /*  styles to overview info */
+  padding: 0;
   border: 1px black solid;
   border-radius: 5px;
-  margin-bottom: 2em;
+  margin: 2em;
   background-color: rgba(200, 200, 200, .6);
 }
 
 .overview h2 {
-  color: black;
-  font-size: 40px;
+  display: none;
+}
+
+.overview h3 {
   text-align: center;
+  color: black;
 }
 
 .overview p:before {
   content: " \2600";
 }
+.overview p{
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.overview #overtext {
+  display: none;
+}
 
 .cur_conditions {
+  /*  styles to current conditions info */
+  display: flex;
+  flex-direction: column;
+  order: 1;
   background-image: url("/weather_data/images/plan-images/raindrops.jpg");
   background-color: rgba(200, 200, 200, .6);
   margin: 2em auto;
@@ -145,19 +161,218 @@ h6 {
   border-radius: 5px;
 }
 
-.cur_conditions ul {
-  list-style: none;
-}
-
 .cur_conditions h3 {
   text-align: center;
   color: black;
 }
-.hourly{
+
+.cur_conditions ul {
+  list-style: none;
+  margin-right: 10px
+}
+
+.cur_conditions #condition {
   display: none;
 }
+.cur_conditions #condition:before{
+  content: " \2600";
+}
+
+.hourly {
+  /*  styles to hourly info, for small screen none */
+  display: none;
+}
+
+
+
 footer {
+  /*  footer alignment */
   line-height: 70px;
   margin-bottom: 3em;
   background-color: #0E89D5;
+  order: 3;
+}
+
+
+
+
+
+
+
+
+
+/* when on large screen */
+
+@media screen and (min-width: 400px) {
+  @import url('https://fonts.googleapis.com/css?family=Sansita');
+  * {
+    box-sizing: border-box;
+    /* changes width property
+  to total width instead of content width */
+  }
+
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+  article,
+  aside,
+  footer,
+  header,
+  nav,
+  section,
+  main,
+  figcaption,
+  figure {
+    display: block;
+    /* just in case we have
+  any older browsers that don't recognize
+  the HTML5 semantic elements */
+  }
+
+  #page-header {
+    /*  align header and set background */
+    order: -2;
+    background-color: #0E89D5;
+  }
+
+  nav {
+    /*  move nav to top */
+    display: flex;
+    order: -1;
+    background-color: #0E89D5;
+  }
+
+  nav a:link {
+    /*unvisited link*/
+    color: #FFF;
+  }
+
+  nav a:visited {
+    /*visited link*/
+    color: #d8f;
+  }
+
+  nav a:hover,
+  a:focus {
+    /*Link: hover, Link:Focus:*/
+    color: #6C4DDD;
+  }
+
+  nav ul li {
+    /*  sizing font of nav bar*/
+    font-size: 1em;
+  }
+
+  main h1{
+    /*  add smaller margin to top and bottom*/
+    margin:10px 0 10px;
+  }
+
+  .overview,
+  .cur_conditions,
+  .hourly {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 10em;
+    flex-basis: 100%;
+  }
+
+  .overview h2,
+  .cur_conditions h3,
+  .hourly h2 {
+    color: #000;
+    font-size: 20px;
+  }
+
+
+  #where {
+    order: -2;
+  }
+
+  #boxes{
+    display:flex;
+
+  }
+  .overview {
+    /* styles to overview info */
+    margin: 0;
+    padding: 5px;
+    margin-right: 2em;
+    margin-bottom: 2em;
+  }
+
+  .overview h2 {
+    /* increase font for title*/
+    display: inherit;
+    margin: 0px;
+    align-self: center;
+    text-align: center
+
+  }
+
+  .overview h3 {
+    margin: 10px;
+    align-self: center;
+  }
+
+  .overview p {
+    /*  align the text to center*/
+    align-self: center;
+    margin: 5px;
+  }
+
+  .cur_conditions {
+    /*  styles to current conditions info */
+    margin: 0;
+    order: -1;
+    padding: 5px;
+    margin:0 2em;
+    margin-bottom: 2em;
+
+  }
+
+  .cur_conditions h3 {
+    align-self: center;
+  }
+
+  .cur_conditions ul {
+    /*  list style */
+    margin-top: 5px;
+    font-size: 15px;
+    margin:0 1em;
+    padding: 0;
+  }
+
+  .cur_conditions #condition {
+    display: inherit;
+  }
+  .cur_conditions #condition:before{
+    content: " \2600";
+  }
+  .hourly {
+    /*  styles to hourly info, for small screen none */
+    border: 1px black solid;
+    border-radius: 5px;
+    background-color: rgba(200, 200, 200, .6);
+    padding: 5px;
+    margin-right: 2em;
+    margin-bottom: 2em;
+  }
+
+  .hourly h2 {
+    /*    heading style */
+    align-self: center;
+    text-align: center;
+    margin: 0;
+  }
+
+  .hourly ul {
+    /*  list style */
+    list-style: none;
+    align-self: center;
+    margin: 0 10px;
+  }
 }

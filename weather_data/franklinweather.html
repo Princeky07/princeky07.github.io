@@ -12,7 +12,7 @@
 <body>
   <header id="page-header">
 <!--    <img src="images/plan-images/logo.jpeg" alt="logo" />-->
-    <p id=logo>&#9748</p>
+    <p id=logo>&#9748;</p>
     <span class="site-name">Weather Site</span>
   </header>
   <nav>
@@ -24,21 +24,28 @@
       <li><a title="Search" href="">Search</a></li>
     </ul>
   </nav>
+
   <main>
-    <h1>Franklin, ID</h1>
+    <h1 id="where">Franklin, ID</h1>
+    <div id="boxes">
     <section class="overview">
-      <h2>70 F</h2>
-      <p> 90 F / 66 F </p>
+      <h2>Current Temp</h2>
+      <h3>70 F</h3>
+      <p id="overtext">Todays High and Low </p>
+      <p>90 F / 66 F </p>
     </section>
 
     <section class="cur_conditions">
       <h3>Current Conditions</h3>
       <ul>
         <li>
-          <b>Wind:</b> Southwest @ 1 - 5 MPH
+          <b>Wind:</b> Southwest @ 1-5 MPH
         </li>
         <li>
-          <b>Precip:</b> 0%
+          <b>Precipitation:</b> 0%
+        </li>
+        <li>
+          <p id=condition><b>sunny</b></p>
         </li>
       </ul>
     </section>
@@ -46,11 +53,12 @@
     <section class="hourly">
       <h2>Hourly Forecast</h2>
       <ul>
-        <li>7am ..F</li>
-        <li>8am ..F</li>
-        <li>9am ..F</li>
+        <li>7am 0F</li>
+        <li>8am 0F</li>
+        <li>9am 0F</li>
       </ul>
     </section>
+    </div>
   </main>
   <footer>
     &copy;2017 Weather Site
