@@ -347,6 +347,7 @@ footer {
 
   .cur_conditions #condition {
     display: inherit;
+    text-align: center;
   }
   .cur_conditions #condition:before{
     content: " \2600";
