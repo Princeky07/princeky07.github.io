@@ -204,7 +204,6 @@ footer {
 /* when on large screen */
 
 @media screen and (min-width: 400px) {
-  @import url('https://fonts.googleapis.com/css?family=Sansita');
   * {
     box-sizing: border-box;
     /* changes width property
@@ -242,6 +241,7 @@ footer {
     display: flex;
     order: -1;
     background-color: #0E89D5;
+    padding-right: 2px;
   }
 
   nav a:link {
@@ -300,8 +300,8 @@ footer {
     /* styles to overview info */
     margin: 0;
     padding: 5px;
-    margin-right: 2em;
-    margin-bottom: 2em;
+    margin-right: 2vw;
+    margin-bottom: 2vw;
   }
 
   .overview h2 {
@@ -329,9 +329,8 @@ footer {
     margin: 0;
     order: -1;
     padding: 5px;
-    margin:0 2em;
-    margin-bottom: 2em;
-
+    margin:0 2vw;
+    margin-bottom: 2vw;
   }
 
   .cur_conditions h3 {
@@ -342,7 +341,7 @@ footer {
     /*  list style */
     margin-top: 5px;
     font-size: 15px;
-    margin:0 1em;
+    margin:0 1vw;
     padding: 0;
   }
 
@@ -358,8 +357,8 @@ footer {
     border-radius: 5px;
     background-color: rgba(200, 200, 200, .6);
     padding: 5px;
-    margin-right: 2em;
-    margin-bottom: 2em;
+    margin-right: 2vw;
+    margin-bottom: 2vw;
   }
 
   .hourly h2 {
@@ -376,3 +375,12 @@ footer {
     margin: 0 10px;
   }
 }
+
+@media screen and (max-width: 480px) {
+  nav {
+    /*  move nav to top */
+    background-color: #0E89D5;
+    font-size: 4vw;
+  }
+}
+
