@@ -50,7 +50,6 @@ figure {
 
 nav {
   /*  move nav to bottom */
-  display: flex;
   order: 4;
   background-color: #0E89D5;
   line-height: 3px;
@@ -84,7 +83,6 @@ nav ul {
 nav ul li {
   /*  sizing of nav bar*/
   padding-right: 1em;
-  font-size: 4vw;
 }
 
 body {
@@ -99,9 +97,6 @@ body {
 
 main {
   /*  add background image and styling components*/
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
   background-image: url("/weather_data/images/plan-images/sunny-winter.jpg");
   background-size: cover;
   background-color: #FFF
@@ -120,7 +115,6 @@ h6 {
 
 .overview {
   /*  styles to overview info */
-  padding: 0;
   border: 1px black solid;
   border-radius: 5px;
   margin: 2em;
@@ -151,17 +145,15 @@ h6 {
 
 .cur_conditions {
   /*  styles to current conditions info */
-  display: flex;
-  flex-direction: column;
-  order: 1;
   background-image: url("/weather_data/images/plan-images/raindrops.jpg");
+  background-size: cover;
   background-color: rgba(200, 200, 200, .6);
-  margin: 2em auto;
+  margin: 2em;
   border: 1px solid;
   border-radius: 5px;
 }
 
-.cur_conditions h3 {
+.cur_conditions h2 {
   text-align: center;
   color: black;
 }
@@ -176,6 +168,7 @@ h6 {
 }
 .cur_conditions #condition:before{
   content: " \2600";
+/*  content: " \2608";*/
 }
 
 .hourly {
@@ -188,7 +181,6 @@ h6 {
 footer {
   /*  footer alignment */
   line-height: 70px;
-  margin-bottom: 3em;
   background-color: #0E89D5;
   order: 3;
 }
@@ -203,7 +195,7 @@ footer {
 
 /* when on large screen */
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 450px) {
   * {
     box-sizing: border-box;
     /* changes width property
@@ -238,10 +230,8 @@ footer {
 
   nav {
     /*  move nav to top */
-    display: flex;
     order: -1;
     background-color: #0E89D5;
-    padding-right: 2px;
   }
 
   nav a:link {
@@ -260,11 +250,6 @@ footer {
     color: #6C4DDD;
   }
 
-  nav ul li {
-    /*  sizing font of nav bar*/
-    font-size: 1em;
-  }
-
   main h1{
     /*  add smaller margin to top and bottom*/
     margin:10px 0 10px;
@@ -275,42 +260,33 @@ footer {
   .hourly {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: 10em;
     flex-basis: 100%;
   }
 
   .overview h2,
-  .cur_conditions h3,
+  .cur_conditions h2,
   .hourly h2 {
     color: #000;
     font-size: 20px;
   }
 
-
-  #where {
-    order: -2;
-  }
-
   #boxes{
     display:flex;
-
+    height: 10em;
   }
   .overview {
     /* styles to overview info */
     margin: 0;
     padding: 5px;
-    margin-right: 2vw;
-    margin-bottom: 2vw;
+    margin-right: 3vw;
+    margin-bottom: 3vw;
   }
 
   .overview h2 {
     /* increase font for title*/
     display: inherit;
-    margin: 0px;
+    margin: 2vw;
     align-self: center;
-    text-align: center
-
   }
 
   .overview h3 {
@@ -329,17 +305,21 @@ footer {
     margin: 0;
     order: -1;
     padding: 5px;
-    margin:0 2vw;
-    margin-bottom: 2vw;
+    margin:0 3vw;
+    margin-bottom: 3vw;
+    background-image: none;
+    overflow-x: hidden;
+    overflow-y: scroll;
   }
 
-  .cur_conditions h3 {
+  .cur_conditions h2 {
     align-self: center;
+    margin: 2vw;
+
   }
 
   .cur_conditions ul {
     /*  list style */
-    margin-top: 5px;
     font-size: 15px;
     margin:0 1vw;
     padding: 0;
@@ -349,30 +329,29 @@ footer {
     display: inherit;
     text-align: center;
   }
-  .cur_conditions #condition:before{
-    content: " \2600";
-  }
+
   .hourly {
     /*  styles to hourly info, for small screen none */
     border: 1px black solid;
     border-radius: 5px;
     background-color: rgba(200, 200, 200, .6);
     padding: 5px;
-    margin-right: 2vw;
-    margin-bottom: 2vw;
+    margin-right: 3vw;
+    margin-bottom: 3vw;
+    overflow-x: hidden;
+    overflow-y: scroll;
   }
 
   .hourly h2 {
     /*    heading style */
-    align-self: center;
     text-align: center;
-    margin: 0;
+    margin: 2vw;
   }
 
   .hourly ul {
     /*  list style */
     list-style: none;
-    align-self: center;
+    text-align: center;
     margin: 0 10px;
   }
 }
