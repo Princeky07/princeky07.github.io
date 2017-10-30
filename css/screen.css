@@ -130,9 +130,6 @@ h6 {
   color: black;
 }
 
-.overview p:before {
-  content: " \2600";
-}
 .overview p{
   margin-left: 10px;
   margin-right: 10px;
@@ -166,17 +163,11 @@ h6 {
 .cur_conditions #condition {
   display: none;
 }
-.cur_conditions #condition:before{
-  content: " \2600";
-/*  content: " \2608";*/
-}
 
 .hourly {
   /*  styles to hourly info, for small screen none */
   display: none;
 }
-
-
 
 footer {
   /*  footer alignment */
