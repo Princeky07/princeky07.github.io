@@ -52,6 +52,7 @@ nav {
   /*  move nav to bottom */
   order: 4;
   background-color: #0E89D5;
+  line-height: 3px;
   padding: 4px;
 }
 
@@ -69,7 +70,7 @@ nav a:visited {
 nav a:hover,
 a:focus {
   /*Link: hover, Link:Focus:*/
-  color: #6c4ddb;
+  color: #6C4DDD;
 }
 
 nav ul {
@@ -96,7 +97,7 @@ body {
 
 main {
   /*  add background image and styling components*/
-  background-image: url("../weather_data/images/plan-images/sunny-winter.jpg");
+  background-image: url("/weather_data/images/plan-images/sunny-winter.jpg");
   background-size: cover;
   background-color: #FFF
 }
@@ -179,15 +180,12 @@ footer {
 
 
 
-@media screen and (max-width: 480px) {
-  nav {
-/*          move nav to top*/
-    background-color: #0E89D5;
-    font-size: 4vw;
-  }
-}
+
+
+
 
 /* when on large screen */
+
 @media screen and (min-width: 450px) {
   * {
     box-sizing: border-box;
@@ -225,6 +223,22 @@ footer {
     /*  move nav to top */
     order: -1;
     background-color: #0E89D5;
+  }
+
+  nav a:link {
+    /*unvisited link*/
+    color: #FFF;
+  }
+
+  nav a:visited {
+    /*visited link*/
+    color: #d8f;
+  }
+
+  nav a:hover,
+  a:focus {
+    /*Link: hover, Link:Focus:*/
+    color: #6C4DDD;
   }
 
   main h1{
@@ -332,3 +346,12 @@ footer {
     margin: 0 10px;
   }
 }
+
+@media screen and (max-width: 480px) {
+  nav {
+    /*  move nav to top */
+    background-color: #0E89D5;
+    font-size: 4vw;
+  }
+}
+

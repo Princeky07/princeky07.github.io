@@ -20,7 +20,7 @@ main,
 figcaption,
 figure {
   display: block;
-  /*
+/*
    just in case we have
   any older browsers that don't recognize
   the HTML5 semantic elements
@@ -29,9 +29,13 @@ figure {
 
 #page-header {
   display: flex;
-  order: 1;
   align-items: center;
-  background-color: black;
+  background-color: #0E89D5;
+}
+
+#logo {
+  font-size:4em;
+  margin:0;
 }
 
 .site-name {
@@ -39,14 +43,14 @@ figure {
   font-weight: 600;
   font-family: Sansita, "gadget", generic-family;
   font-style: italic;
-  font-size: 8vw;
-  color:rebeccapurple
 }
 
 nav {
-  display: flex;
-  order: 5;
-  background-color: black;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #0E89D5;
   text-align: center;
   padding: 3px;
 }
@@ -59,13 +63,13 @@ nav a:link {
 
 nav a:visited {
   /*visited link*/
-  color: rebeccapurple;
+  color: #d8f;
 }
 
 nav a:hover,
 a:focus {
   /*Link: hover, Link:Focus:*/
-  color: blue;
+  color: #6C4DDD;
 }
 
 nav ul {
@@ -78,12 +82,10 @@ nav ul {
 
 nav ul li {
   padding-right: 1em;
-  font-size:3vw;
+  font-size: 3vw;
 }
 
 Body {
-  display: flex;
-  flex-direction: column;
   font-family: 'Helvetica', sans-serif;
   margin: 0;
   padding: 0;
@@ -92,10 +94,9 @@ Body {
 
 main {
   display: flex;
-  order: 3;
   flex-flow: column nowrap;
   align-items: center;
-  background-image: url("../images/th.jpg");
+  background-image: url("/weather_data/images/plan-images/sunny-winter.jpg");
   background-size: cover;
   background-color: #FFF
 }
@@ -114,7 +115,7 @@ h6 {
   background-color: rgba(200, 200, 200, .6);
   margin: 2em;
   border: 1px solid;
-  border-radius: 60px;
+  border-radius: 5px;
   text-align: center;
 }
 
@@ -122,30 +123,13 @@ h6 {
   text-align: center;
   color: black;
 }
-
 .home p {
   margin-left: 2em;
   margin-right: 2em
 }
 
 footer {
-  display: flex;
-  order: 4;
   line-height: 70px;
-  background-color: #000;
-}
-small{
-  color:rebeccapurple;
-}
-
-@media screen and (min-width: 480px) {
-  nav {
-    order: 2;
-  }
-  nav ul li {
-    font-size: 16px;
-  }
-  .site-name {
-    font-size: 2em;
-  }
+  margin-bottom: 3em;
+  background-color: #0E89D5;
 }
