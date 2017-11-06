@@ -45,7 +45,7 @@ figure {
   font-family: Sansita, "gadget", generic-family;
   font-style: italic;
   font-size: 8vw;
-  color:rebeccapurple
+  color:plum
 }
 
 nav {
@@ -64,7 +64,7 @@ nav a:link {
 
 nav a:visited {
   /*visited link*/
-  color: rebeccapurple;
+  color: plum;
 }
 
 nav a:hover,
@@ -139,7 +139,7 @@ footer {
   background-color: #000;
 }
 small{
-  color:rebeccapurple;
+  color:plum;
 }
 
 @media screen and (min-width: 480px) {
