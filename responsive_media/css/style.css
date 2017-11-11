@@ -170,15 +170,18 @@ h1 {
   body {
     font-size: 1.25em;
   }
+
   .wrapper {
     display: flex;
     flex-flow: column;
     flex-wrap: nowrap;
   }
+
   h1 {
     font-size: 2em;
     line-height: 1.125;
   }
+
   /*	Background Images - Use with medium screens */
   .page-header {
     background-image: url(../images/nps-logo-100.png), url(../images/looking_down_800.jpg);
@@ -186,20 +189,25 @@ h1 {
     background-position: right, center;
     background-size: contain, cover;
   }
+
   .page-nav {
     position: relative;
   }
+
   .page-nav li {
     flex: 0 1 20%;
   }
+
   .main {
     line-height: 1.375;
   }
+
   .featured-image {
     margin: 0 1em 1em 0;
     float: left;
     width: 50%;
   }
+
   .featured-video {
     float: left;
     display: inline-block;
@@ -207,9 +215,11 @@ h1 {
     height: auto;
     margin: 0 1em 1em 0;
   }
+
   .featured-video + p {
     clear: both;
   }
+
   .page-footer {
     margin-bottom: .5em;
   }
@@ -225,15 +235,18 @@ h1 {
   body {
     font-size: 1.5vw;
   }
+
   .wrapper {
     display: flex;
     flex-flow: column;
     flex-wrap: nowrap;
   }
+
   h1 {
     font-size: 3em;
     line-height: 1.05;
   }
+
   /*	Background Images - Use with large screens */
   .page-header {
     background-image: url(../images/nps-logo-150.png), url(../images/looking_down_1200.jpg);
@@ -241,9 +254,11 @@ h1 {
     background-position: right, center;
     background-size: contain, cover;
   }
+
   .page-nav li {
     flex: 0 1 10%;
   }
+
   .main {
     max-width: 80%;
     padding-right: 2em;
