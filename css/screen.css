@@ -264,13 +264,15 @@ footer {
     padding: 5px;
     margin-right: 3vw;
     margin-bottom: 3vw;
+    overflow-x: hidden;
+    overflow-y: scroll;
   }
 
   .overview h2 {
     /* increase font for title*/
     display: inherit;
     margin: 2vw;
-    align-self: center;
+    text-align: center
   }
 
   .overview h3 {
