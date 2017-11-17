@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title id = "title">princeky07.github.io | Weather</title>
+    <meta name="description" content="weather_in_franklin">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="../css/screen.css" media="screen">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  </head>
+  <!-- *********************************************
+* Who Did You Collaborate With On This Assessment?
+* 1. kristy prince
+* 2. marissa page
+* 3. abigail lusley
+* 4. suyeon yang
+* 5.
+* ******************************************** -->
+  <body>
+    <header id="page-header">
+      <!--    <img src="images/plan-images/logo.jpeg" alt="logo" />-->
+      <p id=logo>&#9748;</p>
+      <span class="site-name">Weather Site</span>
+    </header>
+    <nav>
+      <ul>
+        <li><a title="Go to home page" href="../index.html">Home</a> </li>
+        <li><a title="Franklin Idaho Weather" href="/weather_data/franklinweather.html">Franklin</a> </li>
+        <li><a title="Greenville Idaho Weather" href="greenvilleweather.html">Greenville</a> </li>
+        <li><a title="Springfield Idaho Weather" href="">Springfield</a> </li>
+        <li><a title="Search" href="">Search</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h1 id="where"></h1>
+      <div id="boxes">
+        <section class="overview">
+          <h2>Current Temp</h2>
+          <h3 id = "currentTemp"></h3>
+          <p id="temp"></p>
+        </section>
+
+        <section class="cur_conditions">
+          <h2>Current Conditions</h2>
+          <ul>
+            <li id = "wind">
+            </li>
+            <li id = "precipitation">
+            </li>
+            <li id="summary">
+            </li>
+          </ul>
+        </section>
+
+        <section class="hourly">
+          <h2>Hourly Forecast</h2>
+          <ul>
+            <li>1am 67F</li>
+            <li>2am 69F</li>
+            <li>3am 69F</li>
+            <li>4am 69F</li>
+            <li>5am 70F</li>
+            <li>6am 69F</li>
+            <li>7am 72F</li>
+            <li>8am 74F</li>
+            <li>9am 77F</li>
+            <li>10am 79F</li>
+            <li>11am 81F</li>
+            <li>12am 84F</li>
+            <li>1pm 86F</li>
+            <li>2pm 88F</li>
+            <li>3pm 90F</li>
+            <li>4pm 90F</li>
+            <li>5pm 85F</li>
+            <li>6pm 83F</li>
+            <li>7pm 79F</li>
+            <li>8pm 74F</li>
+            <li>9pm 70F</li>
+            <li>10pm 68F</li>
+            <li>11pm 66F</li>
+            <li>12pm 67F</li>
+          </ul>
+        </section>
+      </div>
+    </main>
+    <footer>
+      &copy;2017 Weather Site
+    </footer>
+    <script src="/js/weather.json/home_wu.js"></script>
+  </body>
+
+</html>
