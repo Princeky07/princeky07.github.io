@@ -35,6 +35,7 @@ $(function () {
         var windDir = data['current_observation']['wind_dir'];
         var percip = data.forecast.simpleforecast.forecastday[1].pop;
         var summary_w = data['current_observation']['weather'];
+        var image = data.current_observation.icon_url;
 
         console.log(" city: " + cityName + ", temp: " + temp_f + ", temp high: " + temp_high + ", temp low: " + temp_low + ", windmph: " + windMph + ", wind direction: " + windDir + ", percipitation: " + percip + ", summary: " + summary_w );
 
@@ -55,7 +56,7 @@ $(function () {
         highlow.innerHTML = temp_high + ("&#176") + "F" + " / " + temp_low + ("&#176")+ "F";
         areaMph.innerHTML = "<b> Wind: </b>" + windDir + " " + windMph + " mph";
         percipers.innerHTML = "<b> Precipitation: </b>" + percip + "%";
-        weatherSum.innerHTML = "<p id=condition> <b>" + summary_w + "</b></p>";
+        weatherSum.innerHTML = "<p id='condition'> <b> <span id ='image'> <img src = " + image + "></span>" + summary_w + "</b></p>";
 
         $("#cover").fadeOut(250);
 
