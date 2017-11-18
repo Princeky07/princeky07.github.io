@@ -56,7 +56,7 @@ $(function () {
         highlow.innerHTML = temp_high + ("&#176") + "F" + " / " + temp_low + ("&#176")+ "F";
         areaMph.innerHTML = "<b> Wind: </b>" + windDir + " " + windMph + " mph";
         percipers.innerHTML = "<b> Precipitation: </b>" + percip + "%";
-        weatherSum.innerHTML = "<p id='condition'> <b> <span id ='image'> <img src = " + image + "></span>" + summary_w + "</b></p>";
+        weatherSum.innerHTML = "<p id='condition'> <b> <span id = 'image'> <img src = " + image + "></span>" + summary_w + "</b></p>";
 
         $("#cover").fadeOut(250);
 

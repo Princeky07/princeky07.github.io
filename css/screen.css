@@ -161,7 +161,10 @@ h6 {
 
 .cur_conditions #condition {
   display: none;
-  padding-left: 2px
+}
+
+.cur_condition #image{
+  padding-left: 5px;
 }
 
 .hourly {
@@ -302,12 +305,11 @@ footer {
   .cur_conditions h2 {
     align-self: center;
     margin: 2vw;
-
   }
 
   .cur_conditions ul {
     /*  list style */
-    font-size: 15px;
+    font-size: 16px;
     margin:0 1vw;
     padding: 0;
   }
