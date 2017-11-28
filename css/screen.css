@@ -276,7 +276,7 @@ footer {
     /* increase font for title*/
     display: inherit;
     margin: 2vw;
-    text-align: center
+    align-self: center
   }
 
   .overview h3 {
@@ -340,8 +340,8 @@ footer {
   .hourly ul {
     /*  list style */
     list-style: none;
-    text-align: center;
     margin: 0 10px;
+    align-self: center;
   }
 }
 

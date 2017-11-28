@@ -37,16 +37,14 @@ $(function () {
         var summary_w = data['current_observation']['weather'];
         var image = data.current_observation.icon_url;
 
-//        &.each(data.RESULTS, function(hour, time){
-//
-//
-//        });
+        for (var i = 0; i < 4 ; i++) {
+          var hour = data.hourly_forecast[i].FCTTIME.civil;
+        };
+        for (var i = 0; i < 4; i++) {
+          var tempHour = data.hourly_forecast[i].temp.english
+        }
 
-
-//        var hour = data.hourly_forecast[0].FCTTIME.hour
-//        var tempHour = data.hourly_forecast[0].FCTTIME.temp.english
-
-        console.log(" city: " + cityName + ", temp: " + temp_f + ", temp high: " + temp_high + ", temp low: " + temp_low + ", windmph: " + windMph + ", wind direction: " + windDir + ", percipitation: " + percip + ", summary: " + summary_w );
+        console.log(" city: " + cityName + ", temp: " + temp_f + ", temp high: " + temp_high + ", temp low: " + temp_low + ", windmph: " + windMph + ", wind direction: " + windDir + ", percipitation: " + percip + ", summary: " + summary_w);
 
         console.log(data);
 
@@ -58,14 +56,16 @@ $(function () {
         var areaMph = document.getElementById("wind");
         var percipers = document.getElementById("precipitation");
         var weatherSum = document.getElementById("summary");
+        var fhour = document.getElementById('future');
 
         newTitle.innerHTML = cityName + ", " + cityState + " | " + orgTitle;
         city.innerHTML = cityName + ", " + cityState;
         temp.innerHTML = Math.round(temp_f) + ("&#176") + "F";
-        highlow.innerHTML = temp_high + ("&#176") + "F" + " / " + temp_low + ("&#176")+ "F";
+        highlow.innerHTML = temp_high + ("&#176") + "F" + " / " + temp_low + ("&#176") + "F";
         areaMph.innerHTML = "<b> Wind: </b>" + windDir + " " + windMph + " mph";
         percipers.innerHTML = "<b> Precipitation: </b>" + percip + "%";
         weatherSum.innerHTML = "<p id='condition'> <b> <span id = 'image'> <img src = " + image + "></span>" + summary_w + "</b></p>";
+        fhour.innerHTML = hour + " " + tempHour + ("&#176") + "F";
 
         $("#cover").fadeOut(250);
 
@@ -73,6 +73,10 @@ $(function () {
     });
 
   }
+
+
+
+
 
   // A function for changing a string to TitleCase
   function toTitleCase(str) {

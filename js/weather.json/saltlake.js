@@ -8,7 +8,7 @@ function toTitleCase(str) {
 // Get the data from the wunderground API
 jQuery(document).ready(function($) {
   $.ajax({
-    url: "//api.wunderground.com/api/77e496e9205dcce0/geolookup/conditions/forecast/q/UT/Salt_Lake_City.json",
+    url: "//api.wunderground.com/api/77e496e9205dcce0/geolookup/conditions/forecast/hourly/q/UT/Salt_Lake_City.json",
     dataType: "jsonp",
     success: function (data) {
       console.log(data);
@@ -22,6 +22,13 @@ jQuery(document).ready(function($) {
       var percip = data.forecast.simpleforecast.forecastday[1].pop;
       var summary_w = data['current_observation']['weather'];
       var image = data.current_observation.icon_url;
+      for (var i = 0; i < 4; i++) {
+        var hour = data.hourly_forecast[i].FCTTIME.civil;
+      };
+      for (var i = 0; i < 4; i++) {
+        var tempHour = data.hourly_forecast[i].temp.english
+        }
+
 
       console.log(" city: " + cityName + ", temp: " + temp_f + ", temp high: " + temp_high + ", temp low: " + temp_low + ", windmph: " + windMph + ", wind direction: " + windDir + ", percipitation: " + percip + ", summary: " + summary_w );
 
@@ -35,6 +42,7 @@ jQuery(document).ready(function($) {
       var areaMph = document.getElementById("wind");
       var percipers = document.getElementById("precipitation");
       var weatherSum = document.getElementById("summary");
+      var fhour = document.getElementById('future');
 
       newTitle.innerHTML = cityName + ", " + cityState + " | " + orgTitle;
       city.innerHTML = cityName + ", " + cityState;
@@ -43,6 +51,7 @@ jQuery(document).ready(function($) {
       areaMph.innerHTML = "<b> Wind: </b>" + windDir + " " + windMph + " mph";
       percipers.innerHTML = "<b> Precipitation: </b>" + percip + "%";
       weatherSum.innerHTML = "<p id='condition'> <b> <span id = 'image'> <img src = " + image + "></span>" + summary_w + "</b></p>";
+      fhour.innerHTML = hour + " " + tempHour + ("&#176") + "F";
 
       $("#cover").fadeOut(250);
     }
