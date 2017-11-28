@@ -23,7 +23,7 @@ $(function () {
   // Get the data from the wunderground API
   function getData(lat, long) {
     $.ajax({
-      url: "https://api.wunderground.com/api/77e496e9205dcce0/forecast/geolookup/conditions/q/" + lat + "," + long + ".json",
+      url: "https://api.wunderground.com/api/77e496e9205dcce0/forecast/hourly/geolookup/conditions/q/" + lat + "," + long + ".json",
       dataType: "jsonp",
       success: function (data) {
         var cityName = data["location"]["city"];
@@ -36,6 +36,15 @@ $(function () {
         var percip = data.forecast.simpleforecast.forecastday[1].pop;
         var summary_w = data['current_observation']['weather'];
         var image = data.current_observation.icon_url;
+
+//        &.each(data.RESULTS, function(hour, time){
+//
+//
+//        });
+
+
+//        var hour = data.hourly_forecast[0].FCTTIME.hour
+//        var tempHour = data.hourly_forecast[0].FCTTIME.temp.english
 
         console.log(" city: " + cityName + ", temp: " + temp_f + ", temp high: " + temp_high + ", temp low: " + temp_low + ", windmph: " + windMph + ", wind direction: " + windDir + ", percipitation: " + percip + ", summary: " + summary_w );
 

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <meta charset="UTF-8">
+    <title id="title">Search | princekp07.githun.io</title>
+    <meta name="description" content="Short Description of the page.">
+    <meta name="viewport" content="width=device-width">
+    <link href="/css/search.css" rel="stylesheet" type="text/css" media="screen">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <header id="page-header">
+      <!--    <img src="images/plan-images/logo.jpeg" alt="logo" />-->
+      <p id=logo>&#9748;</p>
+      <span class="site-name">Weather Site</span>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="/weather_data/index.html" title="Go to home weather">Home</a></li>
+        <li><a title="Franklin Idaho Weather" href="/weather_data/franklinweather.html">Franklin</a> </li>
+        <li><a title="Greenville Idaho Weather" href="/weather_data/greenvilleweather.html">Greenville</a> </li>
+        <li><a title="Springfield Idaho Weather" href="">Springfield</a> </li>
+        <li><a title="Search" href="">Search</a></li>
+      </ul>
+    </nav>
+    <main>
+      <form method="get" action="//autocomplete.wunderground.com/aq" id="srchfrm">
+        <input type="search" name="query" id="query">
+        <input type="submit" name="submit" value="Search" id="send">
+      </form>
+
+      <section id="searchResults">
+        <h2>Search Results</h2>
+      </section>
+
+      <section>
+        <h1 id="where"></h1>
+        <div id="boxes">
+          <section class="overview">
+            <h2>Current Temp</h2>
+            <h3 id = "currentTemp"></h3>
+            <p id="temp"></p>
+          </section>
+
+          <section class="cur_conditions">
+            <h2>Current Conditions</h2>
+            <ul>
+              <li id = "wind">
+              </li>
+              <li id = "precipitation">
+              </li>
+              <li id="summary">
+              </li>
+            </ul>
+          </section>
+
+          <section class="hourly">
+            <h2>Hourly Forecast</h2>
+          </section>
+        </div>
+      </section>
+    </main>
+    <footer>
+      &copy;2017 kristy prince
+    </footer>
+    <script src="/js/search.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,345 @@
+/*when on small screen*/
+
+@import url('https://fonts.googleapis.com/css?family=Sansita');
+* {
+  box-sizing: border-box;
+  /* changes width property
+  to total width instead of content width */
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main,
+figcaption,
+figure {
+  display: block;
+  /* just in case we have
+  any older browsers that don't recognize
+  the HTML5 semantic elements */
+}
+
+#page-header {
+  /*  align header and set background */
+  display: flex;
+  align-items: center;
+  background-color: #0e89d5;
+}
+
+#searchResults {
+  border: 1px black solid;
+  border-radius: 5px;
+  background-color: rgba(200, 200, 200, .6);
+
+}
+
+#logo {
+  /*  change logo eliment size */
+  font-size: 4em;
+  margin: 0;
+}
+
+.site-name {
+  /*  adust font in header */
+  font-size: 2em;
+  font-weight: 600;
+  font-family: Sansita, "gadget", generic-family;
+  font-style: italic;
+}
+
+nav {
+  /*  move nav to bottom */
+  order: 4;
+  background-color: #0E89D5;
+  padding: 4px;
+}
+
+nav a:link {
+  /*unvisited link*/
+  text-decoration: none;
+  color: #FFF;
+}
+
+nav a:visited {
+  /*visited link*/
+  color: #d8f;
+}
+
+nav a:hover,
+a:focus {
+  /*Link: hover, Link:Focus:*/
+  color: #6c4ddb;
+}
+
+nav ul {
+  /*    style of nav bar*/
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+nav ul li {
+  /*  sizing of nav bar*/
+  padding-right: 1em;
+}
+
+body {
+  /* remove any margin and padding from body */
+  display: flex;
+  flex-direction: column;
+  font-family: 'Helvetica', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+
+main {
+  /*  add background image and styling components*/
+  background-image: url("../weather_data/images/plan-images/sunny-winter.jpg");
+  background-size: cover;
+  background-color: #FFF
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /*  style fonts to headings */
+  font-family: Sansita, 'Geneva', generic-family;
+  color: #0e89d5;
+}
+.overview {
+  /*  styles to overview info */
+  border: 1px black solid;
+  border-radius: 5px;
+  margin: 2em;
+  background-color: rgba(200, 200, 200, .6);
+}
+
+.overview h2 {
+  display: none;
+}
+
+.overview h3 {
+  text-align: center;
+  color: black;
+}
+
+.overview p{
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.overview #overtext {
+  display: none;
+}
+
+.cur_conditions {
+  /*  styles to current conditions info */
+  background-image: url("/weather_data/images/plan-images/raindrops.jpg");
+  background-size: cover;
+  background-color: rgba(200, 200, 200, .6);
+  margin: 2em;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.cur_conditions h2 {
+  text-align: center;
+  color: black;
+}
+
+.cur_conditions ul {
+  list-style: none;
+  margin-right: 10px;
+}
+
+.cur_conditions #condition {
+  display: none;
+}
+
+.cur_condition #image{
+  padding-left: 5px;
+}
+
+.hourly {
+  /*  styles to hourly info, for small screen none */
+  display: none;
+}
+
+footer {
+  /*  footer alignment */
+  line-height: 70px;
+  background-color: #0E89D5;
+  order: 3;
+}
+
+
+
+@media screen and (max-width: 480px) {
+  nav {
+    /*  move nav to top */
+    background-color: #0E89D5;
+    font-size: 4vw;
+  }
+}
+
+
+
+/* when on large screen */
+
+@media screen and (min-width: 450px) {
+  * {
+    box-sizing: border-box;
+    /* changes width property
+    to total width instead of content width */
+  }
+
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+  article,
+  aside,
+  footer,
+  header,
+  nav,
+  section,
+  main,
+  figcaption,
+  figure {
+    display: block;
+    /* just in case we have
+    any older browsers that don't recognize
+    the HTML5 semantic elements */
+  }
+
+  #page-header {
+    /*  align header and set background */
+    order: -2;
+    background-color: #0E89D5;
+  }
+
+  #searchResults{
+    margin-right:10em;
+  }
+
+  nav {
+    /*  move nav to top */
+    order: -1;
+    background-color: #0E89D5;
+  }
+  .overview,
+  .cur_conditions,
+  .hourly {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+  }
+
+  .overview h2,
+  .cur_conditions h2,
+  .hourly h2 {
+    color: #000;
+    font-size: 20px;
+  }
+
+  #boxes{
+    display:flex;
+    height: 10em;
+  }
+  .overview {
+    /* styles to overview info */
+    margin: 0;
+    padding: 5px;
+    margin-right: 3vw;
+    margin-bottom: 3vw;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  .overview h2 {
+    /* increase font for title*/
+    display: inherit;
+    margin: 2vw;
+    text-align: center
+  }
+
+  .overview h3 {
+    margin: 10px;
+    align-self: center;
+  }
+
+  .overview p {
+    /*  align the text to center*/
+    align-self: center;
+    margin: 5px;
+  }
+
+  .cur_conditions {
+    /*  styles to current conditions info */
+    margin: 0;
+    order: -1;
+    padding: 5px;
+    margin:0 3vw;
+    margin-bottom: 3vw;
+    background-image: none;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  .cur_conditions h2 {
+    align-self: center;
+    margin: 2vw;
+  }
+
+  .cur_conditions ul {
+    /*  list style */
+    font-size: 16px;
+    margin:0 1vw;
+    padding: 0;
+  }
+
+  .cur_conditions #condition {
+    display: inherit;
+    text-align: center;
+  }
+
+  .hourly {
+    /*  styles to hourly info, for small screen none */
+    border: 1px black solid;
+    border-radius: 5px;
+    background-color: rgba(200, 200, 200, .6);
+    padding: 5px;
+    margin-right: 3vw;
+    margin-bottom: 3vw;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  .hourly h2 {
+    /*    heading style */
+    text-align: center;
+    margin: 2vw;
+  }
+
+  .hourly ul {
+    /*  list style */
+    list-style: none;
+    text-align: center;
+    margin: 0 10px;
+  }
+}
+
