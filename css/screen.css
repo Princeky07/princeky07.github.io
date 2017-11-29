@@ -129,7 +129,7 @@ h6 {
   color: black;
 }
 
-.overview p{
+.overview p {
   margin-left: 10px;
   margin-right: 10px;
   text-align: center;
@@ -163,7 +163,7 @@ h6 {
   display: none;
 }
 
-.cur_condition #image{
+.cur_condition #image {
   padding-left: 5px;
 }
 
@@ -238,9 +238,9 @@ footer {
     background-color: #0E89D5;
   }
 
-  main h1{
+  main h1 {
     /*  add smaller margin to top and bottom*/
-    margin:10px 0 10px;
+    margin: 10px 0 10px;
   }
 
   .overview,
@@ -258,8 +258,8 @@ footer {
     font-size: 20px;
   }
 
-  #boxes{
-    display:flex;
+  #boxes {
+    display: flex;
     height: 10em;
   }
   .overview {
@@ -276,7 +276,8 @@ footer {
     /* increase font for title*/
     display: inherit;
     margin: 2vw;
-    align-self: center
+    align-self: center;
+    text-align: center;
   }
 
   .overview h3 {
@@ -295,7 +296,7 @@ footer {
     margin: 0;
     order: -1;
     padding: 5px;
-    margin:0 3vw;
+    margin: 0 3vw;
     margin-bottom: 3vw;
     background-image: none;
     overflow-x: hidden;
@@ -310,8 +311,9 @@ footer {
   .cur_conditions ul {
     /*  list style */
     font-size: 16px;
-    margin:0 1vw;
+    margin: 0 1vw;
     padding: 0;
+    text-align: center;
   }
 
   .cur_conditions #condition {
@@ -344,4 +346,3 @@ footer {
     align-self: center;
   }
 }
-
