@@ -108,7 +108,6 @@ nav ul li {
   display: flex;
   background-image: url(../images/site/feature-small.jpg);
   background-size: cover;
-  background-repeat: no-repeat;
 
 }
 
@@ -143,12 +142,12 @@ nav ul li {
   margin: 6px;
 }
 
-#div1{
-  align-self:baseline;
+#div1 {
+  align-self: baseline;
 }
 
-#div2{
-  align-self:baseline;
+#div2 {
+  align-self: baseline;
 }
 
 #bbq {
@@ -159,7 +158,7 @@ nav ul li {
   margin-left: 30px;
 }
 
-#textbbq{
+#textbbq {
   margin-right: 30px;
 }
 
@@ -199,14 +198,8 @@ For Product Pages
   text-align: center;
 }
 
-#product-boxes {
-  /*align image next to info*/
-  display: flex;
-  flex-direction: column;
-}
-
 #image {
-/*  image display*/
+  /*  image display*/
   display: flex;
   flex-direction: column;
   width: 280px;
@@ -216,6 +209,7 @@ For Product Pages
 
 #description {
   padding: 10px;
+  text-align: center;
 }
 
 #manufacturer {
@@ -235,14 +229,14 @@ For Product Pages
 footer {
   border-top: 2px solid;
   border-top-color: black;
-  font-size: 8px;
+  font-size: 9px;
   text-align: center;
 }
 
-/**************************************
-* Small Screen Feature For In Between
+/**********************************
+* Small/Medium Screen In Between
 * 550px viewport
-**************************************/
+**********************************/
 
 @media (min-width: 550px) {
 
@@ -252,29 +246,45 @@ footer {
   }
 
   .acme-rocket {
-    display: flex;
-    background-image: url(../images/site/feature-small.jpg);
-    background-size: cover;
     height: 200px;
-
   }
 
   .acme-rocket #want-it-now {
-    list-style: none;
-    color: #990033;
     font-size: 18px;
     position: relative;
     left: 45%;
   }
 
-
   .acme-rocket #actionbtn {
     width: 200px;
   }
 
-  #back{
-    background-color: #fff;
+  #product-title{
+    margin: 2px;
+      text-align: center;
+  }
+
+  #image {
+    /*  for the products */
+    width: 470px;
+    padding-left: 100px
+  }
+
+  #description {
+    font-size: 30px;
     text-align: center;
+  }
+
+  #manufacturer {
+    font-size: 25px;
+  }
+
+  #reviews {
+    font-size: 25px;
+  }
+
+  #price {
+    font-size: 40px;
   }
 }
 
@@ -329,7 +339,6 @@ footer {
 
   nav ul li {
     /*  sizing of nav bar*/
-    padding-right: 1em;
     font-size: 3vw;
   }
 
@@ -342,16 +351,12 @@ footer {
     font-size: 50px;
   }
   .acme-rocket {
-    display: flex;
     background-image: url(../images/site/feature-medium.jpg);
-    background-repeat: no-repeat;
     background-size: cover;
-    height: 200px;
+    height: 300px;
   }
 
   .acme-rocket #want-it-now {
-    list-style: none;
-    color: #990033;
     font-size: 20px;
     position: relative;
     left: 55%;
@@ -363,7 +368,6 @@ footer {
 
   #boxes {
     display: flex;
-    flex-direction: row;
   }
 
   .product-review {
@@ -372,12 +376,8 @@ footer {
   }
 
   #recipes-title {
+    margin-top: 25px;
     font-size: 13px;
-  }
-
-  .recipes {
-    display: flex;
-    flex-direction: row;
   }
 
   #bbq {
@@ -385,12 +385,8 @@ footer {
     margin-left: 20px;
   }
 
-  #textbbq {
-    margin-right: 10px;
-  }
-
   #pie {
-    margin: 0;
+    margin-top: 10px;
     margin-left: 20px;
   }
 
@@ -400,7 +396,7 @@ footer {
   }
 
   #taco {
-    margin: 0;
+    margin-top: 10px;
     margin-left: 20px;
   }
 
@@ -408,50 +404,37 @@ footer {
   For Product Pages
   ******************/
   #product-title {
-    text-align: left;
     font-size: 50px;
   }
 
   #product-boxes {
     display: flex;
-    flex-direction: row;
   }
 
   #image {
     /*  for the products */
-    display: flex;
-    flex-direction: column;
     width: 350px;
   }
 
   #description {
-    padding: 10px;
     font-size: 30px;
   }
 
   #manufacturer {
-    text-align: center;
     font-size: 25px;
   }
 
   #reviews {
-    text-align: center;
     font-size: 25px;
   }
 
   #price {
-    color: #de2226;
-    font-size: 30px;
-    text-align: center;
+    font-size: 40px;
   }
 
   footer {
-    border-top: 2px solid;
-    border-top-color: black;
     font-size: 15px;
-    text-align: center;
   }
-
 }
 
 
@@ -510,18 +493,15 @@ footer {
 
   body {
     background-image: url(/acme/images/site/large-background.jpg);
-    background-repeat: no-repeat;
   }
 
   #page-header {
     /*set background */
     background-image: url(../images/site/large-logo.png);
-
   }
 
   nav ul li {
     /*  sizing of nav bar*/
-    padding-right: 1em;
     font-size: 2vw;
   }
 
@@ -530,15 +510,11 @@ footer {
   }
 
   .acme-rocket {
-    display: flex;
     background-image: url(../images/site/feature-large.jpg);
-    background-size: cover;
     height: 400px;
   }
 
   .acme-rocket #want-it-now {
-    list-style: none;
-    color: #990033;
     font-size: 30px;
     position: relative;
     left: 60%;
@@ -549,59 +525,34 @@ footer {
   }
 
   .product-review {
-    padding-left: 100px;
-    font-size: 25px;
+/*    padding-left: 100px;*/
+    font-size: 24px;
   }
 
   #recipes-title {
-    font-size: 30px;
+    margin-top: 30px;
+    font-size: 24px;
   }
 
   /******************
   For Product Pages
   ******************/
-  #product-title {
-    text-align: left;
-    font-size: 50px;
-  }
-  #product-boxes {
-    display: flex;
-  }
 
   #image {
     /*  for the products */
-    flex-direction: column;
     width: 40em;
-    float: left;
     padding-left: 10px;
-    padding-bottom: 20px;
-  }
-
-  #description {
-    padding: 10px;
-    font-size: 30px;
   }
 
   #manufacturer {
-    text-align: center;
     font-size: 30px;
   }
 
   #reviews {
-    text-align: center;
     font-size: 30px;
   }
 
   #price {
-    color: #de2226;
     font-size: 60px;
-    text-align: center;
   }
-  footer {
-    border-top: 2px solid;
-    border-top-color: black;
-    font-size: 14px;
-    text-align: center;
-  }
-
 }
