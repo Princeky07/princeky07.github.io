@@ -108,6 +108,7 @@ nav ul li {
   display: flex;
   background-image: url(../images/site/feature-small.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
 
 }
 
@@ -130,7 +131,7 @@ nav ul li {
 
 .recipes {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
 }
 
@@ -142,12 +143,24 @@ nav ul li {
   margin: 6px;
 }
 
+#div1{
+  align-self:baseline;
+}
+
+#div2{
+  align-self:baseline;
+}
+
 #bbq {
   background-image: url(../images/recipes/bbqsand.jpg);
   background-repeat: no-repeat;
   background-size: contain;
   height: 100px;
   margin-left: 30px;
+}
+
+#textbbq{
+  margin-right: 30px;
 }
 
 #pie {
@@ -187,12 +200,13 @@ For Product Pages
 }
 
 #product-boxes {
+  /*align image next to info*/
   display: flex;
   flex-direction: column;
 }
 
 #image {
-  /*  for the products */
+/*  image display*/
   display: flex;
   flex-direction: column;
   width: 280px;
@@ -202,7 +216,6 @@ For Product Pages
 
 #description {
   padding: 10px;
-  text-align: center;
 }
 
 #manufacturer {
@@ -499,7 +512,7 @@ footer {
   nav ul li {
     /*  sizing of nav bar*/
     padding-right: 1em;
-    font-size: 3vw;
+    font-size: 2vw;
   }
 
   #content-title {
@@ -556,7 +569,6 @@ footer {
 
   #description {
     padding: 10px;
-    text-align: center;
     font-size: 30px;
   }
 
