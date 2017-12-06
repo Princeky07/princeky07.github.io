@@ -411,6 +411,7 @@ footer {
   ******************/
   #product-title {
     font-size: 50px;
+    text-align: left;
   }
 
   #product-boxes {
