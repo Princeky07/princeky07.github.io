@@ -1,7 +1,7 @@
 // Intercept the menu link clicks
 
 //Anvil Page
-$("#page-nav").on("mouseup", "#anvils", function (evt) {
+$("#page-nav").on("click", "#anvils", function (evt) {
   evt.preventDefault();
 
   $.getJSON("/acme/js/acme.json", function (JSON) {
@@ -27,7 +27,7 @@ $("#page-nav").on("mouseup", "#anvils", function (evt) {
 
 
 //Explosives Page
-$("#page-nav").on("mouseup", "#explosives", function (evt) {
+$("#page-nav").on("click", "#explosives", function (evt) {
   evt.preventDefault();
 
   $.getJSON("/acme/js/acme.json", function (JSON) {
@@ -53,7 +53,7 @@ $("#page-nav").on("mouseup", "#explosives", function (evt) {
 });
 
 //Decoys Page
-$("#page-nav").on("mouseup", "#decoys", function (evt) {
+$("#page-nav").on("click", "#decoys", function (evt) {
   evt.preventDefault();
 
   $.getJSON("/acme/js/acme.json", function (JSON) {
@@ -79,7 +79,7 @@ $("#page-nav").on("mouseup", "#decoys", function (evt) {
 });
 
 //Traps Page
-$("#page-nav").on("mouseup", "#traps", function (evt) {
+$("#page-nav").on("click", "#traps", function (evt) {
   evt.preventDefault();
 
   $.getJSON("/acme/js/acme.json", function (JSON) {
