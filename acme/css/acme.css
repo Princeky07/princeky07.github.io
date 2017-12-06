@@ -100,11 +100,13 @@ nav ul li {
 }
 
 #content-title {
+  /*  sizing */
   font-size: 30px;
   margin: 6px;
 }
 
 .acme-rocket {
+  /*  image added and aligned*/
   display: flex;
   background-image: url(../images/site/feature-small.jpg);
   background-size: cover;
@@ -112,6 +114,7 @@ nav ul li {
 }
 
 .acme-rocket #want-it-now {
+  /*  want it now sizing*/
   list-style: none;
   color: #990033;
   font-size: 11px;
@@ -189,7 +192,6 @@ nav ul li {
   margin-top: 30px;
 }
 
-
 /******************
 For Product Pages
 ******************/
@@ -233,6 +235,7 @@ footer {
   text-align: center;
 }
 
+
 /**********************************
 * Small/Medium Screen In Between
 * 550px viewport
@@ -259,9 +262,12 @@ footer {
     width: 200px;
   }
 
-  #product-title{
+  /******************
+  For Product Pages
+  ******************/
+  #product-title {
     margin: 2px;
-      text-align: center;
+    text-align: center;
   }
 
   #image {
@@ -456,9 +462,6 @@ footer {
 }
 
 
-
-
-
 /********************************
 * Large Screen Styles
 * 1200px viewport
@@ -525,7 +528,7 @@ footer {
   }
 
   .product-review {
-/*    padding-left: 100px;*/
+    /*    padding-left: 100px;*/
     font-size: 24px;
   }
 
@@ -537,7 +540,6 @@ footer {
   /******************
   For Product Pages
   ******************/
-
   #image {
     /*  for the products */
     width: 40em;
