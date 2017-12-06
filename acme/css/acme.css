@@ -1,0 +1,459 @@
+/********************************
+* Default Styles - Mobile First
+********************************/
+
+@import url('https://fonts.googleapis.com/css?family=Sansita');
+* {
+  box-sizing: border-box;
+  /* changes width property
+  to total width instead of content width */
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main,
+figcaption,
+figure {
+  display: block;
+  /* just in case we have
+  any older browsers that don't recognize
+  the HTML5 semantic elements */
+}
+
+body {
+  /* remove any margin and padding from body */
+  font-family: 'Helvetica', sans-serif;
+  margin: 0;
+  background-image: url(/acme/images/site/small-background.jpg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /*  style fonts to headings */
+  font-family: Sansita, 'Geneva', generic-family;
+}
+
+#wrapper {
+  display: flex;
+  background-color: #fff;
+  margin: 1.2em;
+  flex-direction: column;
+}
+
+#page-header {
+  /*    align header*/
+  background-image: url(../images/site/small-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 4em;
+  border-bottom: 2px solid;
+}
+
+nav {
+  /*  move nav to bottom */
+  order: 4;
+  background-color: #de2226;
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+nav a:link {
+  /*unvisited link*/
+  text-decoration: none;
+  color: #fff
+}
+
+nav a:visited {
+  /*visited link*/
+  color: #fff
+}
+
+nav a:hover,
+a:focus {
+  /*Link: hover, Link:Focus:*/
+  color: #0000ee
+}
+
+nav ul {
+  /*    style of nav bar*/
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+nav ul li {
+  /*  sizing of nav bar*/
+  padding-right: 1em;
+}
+
+.acme-rocket {
+  display: flex;
+  background-image: url(../images/site/small-feature.jpg);
+  background-size:cover;
+
+}
+
+.acme-rocket #want-it-now {
+  list-style: none;
+  color: #990033;
+  font-size: 11px;
+  position:relative;
+  left:35%;
+}
+
+
+.acme-rocket #actionbtn{
+  width: 140px;
+}
+
+.acme-rocket h2 {
+  margin: 0;
+}
+
+.recipes {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+#bbq {
+  background-image: url(../images/recipes/bbqsand.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100px;
+  margin-left: 30px;
+}
+
+#pie {
+  background-image: url(../images/recipes/potpie.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100px;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+#soup {
+  background-image: url(../images/recipes/soup.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100px;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+#taco {
+  background-image: url(../images/recipes/taco.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100px;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+
+/*for product CSS*/
+#product-title{
+  text-align: center;
+}
+
+#image {
+  /*  for the products */
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  float: left;
+  padding-right: 30px;
+  padding-left: 10px;
+  padding-bottom: 20px;
+}
+
+#description{
+  padding:10px;
+  text-align: center;
+}
+
+#manufacturer{
+  text-align: center;
+}
+
+#reviews{
+  text-align: center;
+}
+
+#price{
+  color:#de2226;
+  font-size: 30px;
+  text-align: center;
+}
+
+footer {
+  border-top: 2px solid;
+  border-top-color: black;
+  font-size: 7px;
+  text-align: center;
+}
+
+/**************************************
+* Small Screen Feature For In Between
+* 550px viewport
+**************************************/
+
+@media (min-width: 550px) {
+
+  .acme-rocket {
+    display: flex;
+    background-image: url(../images/site/small-feature.jpg);
+    background-size:cover;
+    height: 200px
+
+  }
+
+  .acme-rocket #want-it-now {
+    list-style: none;
+    color: #990033;
+    font-size: 18px;
+    position:relative;
+    left:45%;
+  }
+
+
+  .acme-rocket #actionbtn{
+    width: 200px;
+  }
+}
+
+
+/********************************
+* Medium Screen Styles
+* 750px viewport
+********************************/
+
+@media (min-width: 750px) {
+  * {
+    box-sizing: border-box;
+    /* changes width property
+    to total width instead of content width */
+  }
+
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+  article,
+  aside,
+  footer,
+  header,
+  nav,
+  section,
+  main,
+  figcaption,
+  figure {
+    display: block;
+    /* just in case we have
+    any older browsers that don't recognize
+    the HTML5 semantic elements */
+  }
+
+  body {
+    background-image: url(/acme/images/site/medium-background.jpg);
+  }
+
+  #page-header {
+    /*  align header and set background */
+    order: -2;
+    background-image: url(../images/site/medium-logo.png);
+  }
+
+  nav {
+    /*  move nav to top */
+    order: -1;
+  }
+
+  nav ul li {
+    /*  sizing of nav bar*/
+    padding-right: 1em;
+    font-size: 3vw;
+  }
+
+  main h1 {
+    /*  add smaller margin to top and bottom*/
+    margin: 10px 0 10px;
+  }
+
+  .acme-rocket {
+    display: flex;
+    background-image: url(../images/site/medium-feature.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+  }
+
+  .acme-rocket #want-it-now {
+    list-style: none;
+    color: #990033;
+    font-size: 20px;
+    position:relative;
+    left:55%;
+  }
+
+  .acme-rocket #actionbtn{
+    width: 250px;
+  }
+
+  #boxes {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .product-review {
+    order: 1;
+    font-size: 13px
+  }
+
+  #recipes-title{
+    font-size: 13px;
+  }
+
+  .recipes {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #bbq {
+    margin: 0;
+    margin-left: 20px;
+  }
+
+  #textbbq {
+    margin-right: 10px;
+  }
+
+  #pie {
+    margin: 0;
+    margin-left: 20px;
+  }
+
+  #soup {
+    margin: 0;
+    margin-left: 20px;
+  }
+
+  #taco {
+    margin: 0;
+    margin-left: 20px;
+  }
+}
+
+
+/********************************
+* Medium Screen
+* 1000px viewport
+* padding for reviews
+********************************/
+@media (min-width: 1000px){
+  .product-review {
+    padding-left: 100px;
+    font-size: 18px;
+  }
+
+  #recipes-title{
+    font-size: 18px;
+  }
+}
+
+
+
+
+
+/********************************
+* Large Screen Styles
+* 1200px viewport
+********************************/
+
+@media (min-width: 1200px) {
+  * {
+    box-sizing: border-box;
+    /* changes width property
+    to total width instead of content width */
+  }
+
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+  article,
+  aside,
+  footer,
+  header,
+  nav,
+  section,
+  main,
+  figcaption,
+  figure {
+    display: block;
+    /* just in case we have
+    any older browsers that don't recognize
+    the HTML5 semantic elements */
+  }
+
+  body {
+    background-image: url(/acme/images/site/large-background.jpg);
+    background-repeat: no-repeat;
+  }
+
+  #page-header {
+    /*set background */
+    background-image: url(../images/site/large-logo.png);
+
+  }
+
+  nav ul li {
+    /*  sizing of nav bar*/
+    padding-right: 1em;
+    font-size: 3vw;
+  }
+
+  .acme-rocket {
+    display: flex;
+    background-image: url(../images/site/large-feature.jpg);
+    background-size: cover;
+    height: 300px;
+  }
+
+  .acme-rocket #want-it-now {
+    list-style: none;
+    color: #990033;
+    font-size: 30px;
+    position:relative;
+    left:60%;
+  }
+
+  .acme-rocket #actionbtn{
+    width: 350px;
+  }
+
+  .product-review {
+    padding-left: 100px;
+    font-size: 25px;
+  }
+
+  #recipes-title{
+    font-size: 25px;
+  }
+}

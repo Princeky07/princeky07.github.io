@@ -28,10 +28,11 @@ jQuery(document).ready(function($) {
       for (var i = 0; i < 4; i++) {
         var hour = data.hourly_forecast[i].FCTTIME.civil;
         var tempHour = data.hourly_forecast[i].temp.english;
-        $("#future").html(hour + " " + tempHour + ("&#176") + "F");
+        $("#future").html(hour + " " + tempHour + ("&#176") + "F" + "<br>");
 
+//        document.write(hour + " " + tempHour + ("&#176") + "F" + "<br>");
 
-//        document.("#future", hour + " " + tempHour + ("&#176") + "F" + "<br>");
+        console.log(hour + " " + tempHour)
       };
 
 
