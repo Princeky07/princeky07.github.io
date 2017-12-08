@@ -211,7 +211,7 @@ For Product Pages
 
 #description {
   padding: 10px;
-  text-align: center;
+  text-align: left;
 }
 
 #manufacturer {
@@ -273,7 +273,7 @@ footer {
   #image {
     /*  for the products */
     width: 470px;
-    padding-left: 100px
+    padding-left: 100px;
   }
 
   #description {
