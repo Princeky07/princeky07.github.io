@@ -82,6 +82,7 @@ nav ul {
 nav ul li {
   /*  sizing of nav bar*/
   padding-right: 1em;
+  text-align: center;
 }
 
 body {
@@ -211,6 +212,10 @@ footer {
     box-sizing: border-box;
   }
 
+    main {
+        height:  400px
+    }
+
   article,
   aside,
   footer,
@@ -260,7 +265,7 @@ footer {
 
   #boxes {
     display: flex;
-    height: 10em;
+    height: 13em;
   }
   .overview {
     /* styles to overview info */
