@@ -102,7 +102,8 @@ main {
   align-items: center;
   background-image: url("../images/th.jpg");
   background-size: cover;
-  background-color: #FFF
+  background-color: #FFF;
+  height: 20em
 }
 
 h1,
@@ -117,15 +118,17 @@ h6 {
 
 .home {
   background-color: rgba(200, 200, 200, .6);
-  margin: 2em;
+  margin: 5em;
   border: 1px solid;
   border-radius: 60px;
   text-align: center;
+  height: 10em;
 }
 
 .home h1 {
   text-align: center;
   color: black;
+ height: 65px
 }
 .home p {
   margin-left: 2em;
